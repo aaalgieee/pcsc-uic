@@ -1,16 +1,578 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="PCSC 2025 - Philippine Computing Science Congress">
+  <!-- Hero Section with Gradient Background -->
+  <div class="gradient-bg relative overflow-hidden">
+    <!-- Abstract Cloud Effects - Responsive -->
+    <div class="cloud-particle hidden sm:block"></div>
+    <div class="cloud-particle hidden sm:block"></div>
+    <div class="cloud-particle hidden md:block"></div>
+    <div class="cloud-particle hidden md:block"></div>
+    <div class="cloud-particle hidden lg:block"></div>
+    <div class="cloud-particle hidden lg:block"></div>
+    <div class="cloud-particle hidden lg:block"></div>
+    <div class="cloud-particle hidden lg:block"></div>
+    
+    <!-- Additional Decorative Elements - Hidden on mobile for performance -->
+    <div class="hidden md:block absolute top-10 right-32 w-72 h-72 rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);"></div>
+    <div class="hidden md:block absolute bottom-32 left-16 w-56 h-56 rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 80%);"></div>
+    <div class="hidden lg:block absolute top-1/2 left-1/3 w-40 h-40 rounded-full blur-2xl" style="background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);"></div>
+    
+    <!-- Header Navigation -->
+    <header class="relative z-50">
+      <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+        <nav class="flex items-center justify-between">
+          <!-- Logo Section -->
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <a href="/" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center p-1.5 sm:p-2">
+                <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+              </div>
+              <span class="text-white font-semibold text-base sm:text-lg">PCSC 2025</span>
+            </a>
+          </div>
+          
+          <!-- Navigation Links -->
+          <div id="desktop-nav" class="hidden lg:flex items-center space-x-6 xl:space-x-8 ml-8 xl:ml-12">
+            <a href="/about" class="text-white/90 hover:text-white transition-colors font-medium text-sm xl:text-base px-3 py-2 rounded hover:bg-white/10">ABOUT</a>
+            <a href="/program" class="text-white/90 hover:text-white transition-colors font-medium text-sm xl:text-base px-3 py-2 rounded hover:bg-white/10">PROGRAM</a>
+            <a href="/call-for-papers" class="text-white/90 hover:text-white transition-colors font-medium text-sm xl:text-base px-3 py-2 rounded hover:bg-white/10 whitespace-nowrap">CALL FOR PAPERS</a>
+            <a href="/venue" class="text-white/90 hover:text-white transition-colors font-medium text-sm xl:text-base px-3 py-2 rounded hover:bg-white/10">VENUE</a>
+            <a href="/contact" class="text-white/90 hover:text-white transition-colors font-medium text-sm xl:text-base px-3 py-2 rounded hover:bg-white/10">CONTACT</a>
+          </div>
+
+          <!-- CTA Button and Mobile Menu -->
+          <div class="flex items-center space-x-4 sm:space-x-6 ml-4 xl:ml-6">
+            <button class="hidden sm:block bg-white/20 backdrop-blur-sm text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/30 hover:bg-white/30 transition-all font-medium text-sm sm:text-base">
+              REGISTER NOW
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-nav" class="lg:hidden fixed inset-x-0 top-0 z-[9999] bg-gradient-to-b from-pink-900 to-pink-800 backdrop-blur-md border-b border-white/20 transform -translate-y-full transition-transform duration-300 ease-in-out">
+          <div class="px-4 pt-4 pb-6 min-h-screen">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1">
+                  <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+                </div>
+                <span class="text-white font-semibold">PCSC 2025</span>
+              </div>
+              <button id="mobile-menu-close" class="text-white p-2 hover:bg-white/10 rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="space-y-2">
+              <a href="/about" class="block text-white/90 hover:text-white transition-colors font-medium py-4 text-lg border-b border-white/10 hover:bg-white/5 px-2 rounded">ABOUT</a>
+              <a href="/program" class="block text-white/90 hover:text-white transition-colors font-medium py-4 text-lg border-b border-white/10 hover:bg-white/5 px-2 rounded">PROGRAM</a>
+              <a href="/call-for-papers" class="block text-white/90 hover:text-white transition-colors font-medium py-4 text-lg border-b border-white/10 hover:bg-white/5 px-2 rounded">CALL FOR PAPERS</a>
+              <a href="/venue" class="block text-white/90 hover:text-white transition-colors font-medium py-4 text-lg border-b border-white/10 hover:bg-white/5 px-2 rounded">VENUE</a>
+              <a href="/contact" class="block text-white/90 hover:text-white transition-colors font-medium py-4 text-lg hover:bg-white/5 px-2 rounded">CONTACT</a>
+              
+              <!-- Additional Links Section -->
+              <div class="pt-6 mt-6 border-t border-white/20">
+                <p class="text-white/60 text-sm font-medium mb-4 px-2">QUICK LINKS</p>
+                <a href="/student-research" class="block text-white/70 hover:text-white transition-colors font-medium py-3 text-base hover:bg-white/5 px-2 rounded">Student Research Workshop</a>
+                <a href="/accepted-papers" class="block text-white/70 hover:text-white transition-colors font-medium py-3 text-base hover:bg-white/5 px-2 rounded">Accepted Papers</a>
+                <a href="/author-guidelines" class="block text-white/70 hover:text-white transition-colors font-medium py-3 text-base hover:bg-white/5 px-2 rounded">Author Guidelines</a>
+                <a href="/proceedings" class="block text-white/70 hover:text-white transition-colors font-medium py-3 text-base hover:bg-white/5 px-2 rounded">Proceedings</a>
+              </div>
+              
+              <button class="w-full bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-full border border-white/30 hover:bg-white/30 transition-all font-medium mt-8 text-lg">
+                REGISTER NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative z-[5] container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      <div class="max-w-4xl">
+        <!-- Date -->
+        <div class="text-white/80 text-base sm:text-lg mb-4 sm:mb-6 tracking-wide">
+          26 — 27 SEPTEMBER 2025
+        </div>
+        
+        <!-- Main Title -->
+        <h1 class="text-white mb-4">
+          <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-1 sm:mb-2 leading-tight">PHILIPPINE COMPUTING</div>
+          <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-1 sm:mb-2 leading-tight">SCIENCE CONGRESS</div>
+          <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wider">2025</div>
+        </h1>
+
+        <!-- Countdown Timer -->
+        <div class="flex items-center mb-8 sm:mb-12 text-white">
+          <div class="flex space-x-3 sm:space-x-6">
+            <div class="text-center">
+              <div class="text-xl sm:text-2xl font-bold" id="days">349</div>
+              <div class="text-xs sm:text-sm opacity-80">DAYS</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl sm:text-2xl font-bold" id="hours">19</div>
+              <div class="text-xs sm:text-sm opacity-80">HOURS</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl sm:text-2xl font-bold" id="minutes">13</div>
+              <div class="text-xs sm:text-sm opacity-80">MIN</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl sm:text-2xl font-bold" id="seconds">18</div>
+              <div class="text-xs sm:text-sm opacity-80">SEC</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative Arrow - Hidden on mobile -->
+        <div class="hidden lg:block absolute right-27 top-65 text-white/60">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 20 L80 80 M80 80 L80 40 M80 80 L40 80" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Register Button - Repositioned for mobile -->
+        <div class="mt-8 sm:mt-12 lg:absolute lg:right-10 lg:top-[360px] lg:mt-0">
+          <button class="w-full sm:w-auto bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-center">
+            REGISTER NOW
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsor Badges -->
+    <section class="relative z-[5] border-t border-white/20 bg-white/5 backdrop-blur-sm">
+      <div class="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12 lg:space-x-16">
+          <div class="flex items-center space-x-3 text-white/80 text-sm sm:text-base">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center p-2 flex-shrink-0">
+              <img src="/uic-logo.png" alt="University of the Immaculate Conception" class="w-full h-full object-contain" />
+            </div>
+            <span class="font-medium">University of the Immaculate Conception</span>
+          </div>
+          <div class="flex items-center space-x-3 text-white/80 text-sm sm:text-base">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-lg flex items-center justify-center p-2 flex-shrink-0">
+              <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+            </div>
+            <span class="font-medium">Computing Society of the Philippines</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main>
+
+  <!-- About Section -->
+  <section class="bg-white py-12 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">About PCSC 2025</h2>
+        <p class="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+          <strong>PCSC DAVAO</strong> will inspire you to think bigger about the way you work. Join us for never-before-seen 
+          technology releases, talks about tools and solutions, sessions from industry leaders, good coffee, and good people.
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 mb-8 sm:mb-12 leading-relaxed">
+          Here's an overview of what you can expect — we can't wait to hang out!
+        </p>
+        
+        <!-- Program Days -->
+        <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <div class="border-2 border-pink-200 rounded-2xl p-6 sm:p-8 hover:border-pink-400 transition-colors">
+            <div class="text-pink-600 text-sm font-semibold mb-2">FRIDAY 26 SEPTEMBER</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">DAY 01: INNOVATIVE TECHNOLOGIES UNVEILED</h3>
+            <div class="w-full h-32 sm:h-48 bg-gradient-to-br from-pink-100 to-pink-100 rounded-lg mb-4 flex items-center justify-center">
+              <span class="text-gray-500 text-sm sm:text-base">[Conference Image Placeholder]</span>
+            </div>
+          </div>
+          
+          <div class="border-2 border-pink-200 rounded-2xl p-6 sm:p-8 hover:border-pink-400 transition-colors">
+            <div class="text-pink-600 text-sm font-semibold mb-2">SATURDAY 27 SEPTEMBER</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">DAY 02: SHAPING TOMORROW'S TECH FUTURE</h3>
+            <div class="w-full h-32 sm:h-48 bg-gradient-to-br from-blue-100 to-pink-100 rounded-lg mb-4 flex items-center justify-center">
+              <span class="text-gray-500 text-sm sm:text-base">[Workshop Image Placeholder]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call for Papers Section -->
+  <section class="bg-gray-50 py-12 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Call for Papers</h2>
+        <div class="text-center mb-8">
+          <h3 class="text-xl sm:text-2xl font-semibold text-pink-600 mb-4">25th Philippine Computing Science Congress</h3>
+        </div>
+        
+        <div class="prose prose-lg max-w-none mb-8">
+          <p class="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed text-center">
+            The 25th Philippine Computing Science Congress is organized by the Computing Society of the Philippines to enable local and neighboring computing educators, researchers, information and communications technology (ICT) professionals, and students to interact and share their work in computing, computer science, computational science, and ICT. The conference features special lectures by prominent researchers and educators and contributed papers in ICT, computing, computer science, computational science, and related disciplines.
+          </p>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Left Column -->
+          <div class="space-y-8">
+            <!-- Paper Submission -->
+            <div class="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Paper Submission</h3>
+              <div class="mb-4">
+                <p class="text-gray-700 mb-2"><strong>Submission Portal:</strong></p>
+                <a href="https://cmt3.research.microsoft.com/PCSC2025" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium">
+                  https://cmt3.research.microsoft.com/PCSC2025
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                Papers should use the prescribed PCSC 2025 template and have a minimum of 6 pages and maximum of 8 pages, including references.
+              </p>
+              
+              <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                <h4 class="font-semibold text-gray-900 mb-3">Double-Blind Peer Review Guidelines:</h4>
+                <ul class="space-y-2 text-gray-700 text-sm sm:text-base">
+                  <li>• Name and affiliation of the Authors must be removed from the submitted manuscript.</li>
+                  <li>• Remove any citation and references that contain the Authors. Use [Anonymous, 2008] in citing the work of the Authors. For blinding the reference list, write '[Anonymous 2008] Details omitted for double-blind reviewing.'</li>
+                  <li>• Do not include acknowledgment and funding sources.</li>
+                </ul>
+              </div>
+              
+              <p class="text-gray-700">
+                Submitted papers must be original, and not submitted concurrently to a journal or another conference/symposium. Each submitted paper will be peer-reviewed by at least two reviewers and must get an average positive rating for inclusion in the conference program and proceedings.
+              </p>
+            </div>
+
+            <!-- Student Research Workshop -->
+            <div class="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Student Research Workshop</h3>
+              <p class="text-gray-700 mb-4">
+                The PCSC 2025 Student Research Workshop invites students at various stages of their research to present their work and receive mentorship and feedback from the research community. This is also an opportunity to present exciting contributions that showcase innovative technologies and detail preliminary experiments that foster discussions to provoke new ideas to emerge.
+              </p>
+              <p class="text-gray-700">
+                More details can be found on the Student Research Workshop page.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="space-y-8">
+            <!-- Important Dates -->
+            <div class="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Important Dates</h3>
+              <div class="space-y-4">
+                <!-- Submission Deadline -->
+                <div class="border-l-4 border-pink-500 pl-6 py-3">
+                  <h4 class="font-semibold text-gray-900 mb-3 text-sm leading-relaxed">Deadline of Paper Submission for Main Conference and Student Research Workshop</h4>
+                  <div class="flex flex-col space-y-2">
+                    <p class="text-gray-700 text-sm">
+                      <a href="#" class="text-pink-600 hover:text-pink-800 font-medium underline">Submission Portal</a>
+                    </p>
+                    <div class="bg-pink-100 text-pink-800 px-4 py-2 rounded-lg text-sm font-semibold inline-block w-fit">
+                      March 17, 2025
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Author Notification -->
+                <div class="border-l-4 border-blue-500 pl-6 py-3">
+                  <h4 class="font-semibold text-gray-900 mb-3 text-sm leading-relaxed">Author Notification for Main Conference and Student Research Workshop</h4>
+                  <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg text-sm font-semibold inline-block w-fit">
+                    April 9, 2025
+                  </div>
+                </div>
+
+                <!-- Camera-Ready Submission -->
+                <div class="border-l-4 border-green-500 pl-6 py-3">
+                  <h4 class="font-semibold text-gray-900 mb-3 text-sm leading-relaxed">Deadline of Camera-Ready Submission for Main Conference and Student Research Workshop</h4>
+                  <div class="bg-green-100 text-green-800 px-4 py-2 rounded-lg text-sm font-semibold inline-block w-fit">
+                    April 16, 2025
+                  </div>
+                </div>
+
+                <!-- Early-Bird Registration -->
+                <div class="border-l-4 border-orange-500 pl-6 py-3">
+                  <h4 class="font-semibold text-gray-900 mb-3 text-sm leading-relaxed">Early-Bird Registration Deadline</h4>
+                  <div class="flex flex-col space-y-2">
+                    <p class="text-gray-700 text-sm">
+                      <a href="#" class="text-pink-600 hover:text-pink-800 font-medium underline">Registration Link</a>
+                    </p>
+                    <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-lg text-sm font-semibold inline-block w-fit">
+                      April 21, 2025
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Author Registration -->
+                <div class="border-l-4 border-red-500 pl-6 py-3">
+                  <h4 class="font-semibold text-gray-900 mb-3 text-sm leading-relaxed">Author Registration Deadline</h4>
+                  <div class="flex flex-col space-y-2">
+                    <p class="text-gray-700 text-sm">
+                      <a href="#" class="text-pink-600 hover:text-pink-800 font-medium underline">Registration Link</a>
+                    </p>
+                    <div class="bg-red-100 text-red-800 px-4 py-2 rounded-lg text-sm font-semibold inline-block w-fit">
+                      April 21, 2025
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conference Date -->
+                <div class="border-l-4 border-pink-600 bg-gradient-to-r from-pink-50 to-pink-50 pl-6 py-4 rounded-r-lg mt-6">
+                  <h4 class="font-bold text-gray-900 mb-3 text-base">Conference Date</h4>
+                  <div class="bg-pink-600 text-white px-5 py-3 rounded-lg text-base font-bold inline-block w-fit shadow-md">
+                    May 9–11, 2025
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas of Interest -->
+  <section class="bg-gray-50 py-12 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Areas of Interest</h2>
+        <p class="text-center text-gray-600 mb-8 text-sm sm:text-base">Include (But are Not Limited to)</p>
+        
+        <div class="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+          <ul class="grid sm:grid-cols-2 gap-3 sm:gap-4 text-gray-700 text-sm sm:text-base">
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Natural Language Processing</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Intelligent Systems (AI and Computational Intelligence)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Affective and Empathic Computing</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Computational Theory and Algorithms</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Modeling and Simulation</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Computer Networks</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Ubiquitous and Pervasive Computing</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Software Engineering</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Databases and Information</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Databases and Information Retrieval Systems</span>
+            </li>
+            <li class="flex items-start sm:col-span-2">
+              <span class="text-pink-600 mr-3 mt-1">•</span>
+              <span>Emerging Areas in Computing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Information -->
+  <section class="bg-white py-12 sm:py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Venue</h2>
+        <p class="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 text-justify">
+          The <strong>University of the Immaculate Conception (UIC)</strong> is a prestigious Catholic institution 
+          founded in 1905 by the Religious of the Virgin Mary (RVM). From its humble beginnings as "Escuela Catolica de San Pedro," 
+          UIC has evolved into a premier university, achieving university status in 1992. Today, it stands as a leader in 
+          science and technology education in Mindanao, with ISO 9001:2015 certification and multiple PAASCU-accredited programs. 
+          The university is committed to providing Quality Transformative Ignacian Marian Education (Q-TIME) and has established 
+          cutting-edge facilities including the Science Resource Center, Natural Language Processing Research Laboratory, 
+          and advanced IT development centers.
+        </p>
+        
+        <div class="rounded-2xl mb-6 sm:mb-8 overflow-hidden shadow-lg">
+          <img src="/uic-main.jpg" alt="University of the Immaculate Conception" class="w-full h-64 sm:h-80 object-cover object-top" />
+        </div>
+        
+        <div class="text-left bg-gray-50 rounded-xl p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Location Details</h3>
+          <p class="text-gray-700 mb-2 text-sm sm:text-base"><strong>University of the Immaculate Conception - Bajada Campus</strong></p>
+          <p class="text-gray-700 mb-2 text-sm sm:text-base">300 Margarita Village Rd, Buhangin, Davao City</p>
+          <p class="text-gray-700 mb-4 text-sm sm:text-base">Davao del Sur, Philippines</p>
+          
+          <!-- Google Maps Embed -->
+          <div class="mt-6">
+            <h4 class="text-base sm:text-lg font-medium text-gray-900 mb-3">Find Us on the Map</h4>
+            <div class="w-full h-64 sm:h-80 rounded-lg overflow-hidden border border-gray-200">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.208081127998!2d125.61833627582087!3d7.101866192901471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96c4fc4bfbf1f%3A0xd53a0714606b7906!2sUniversity%20of%20the%20Immaculate%20Conception%20-%20Grade%20School!5e0!3m2!1sen!2sph!4v1751918996388!5m2!1sen!2sph"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="University of the Immaculate Conception - Bajada Campus Location">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="gradient-bg py-12 sm:py-20">
+    <!-- Reduced particles for mobile performance -->
+    <div class="hidden sm:block cloud-particle"></div>
+    <div class="hidden sm:block cloud-particle"></div>
+    <div class="hidden md:block cloud-particle"></div>
+    <div class="hidden md:block cloud-particle"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Ready to Join PCSC 2025?</h2>
+      <p class="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
+        Don't miss this opportunity to be part of the premier computing science event in the Philippines.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-pink-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-base sm:text-lg">
+          Register Now
+        </button>
+        <button class="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors text-base sm:text-lg">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 sm:py-12">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-2">
+          <div class="w-6 h-6 sm:w-8 sm:h-8 bg-pink-600 rounded-lg flex items-center justify-center p-1">
+            <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain filter brightness-0 invert" />
+          </div>
+          <span class="font-semibold text-sm sm:text-base">PCSC 2025</span>
+        </div>
+        
+        <div class="text-center md:text-right">
+          <p class="text-gray-400 text-sm sm:text-base">© 2025 | Computing Society of the Philippines</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    // Mobile Menu Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileNav = document.getElementById('mobile-nav');
+      const body = document.body;
+
+      function openMobileMenu() {
+        if (mobileNav) {
+          mobileNav.classList.remove('-translate-y-full');
+          mobileNav.classList.add('translate-y-0');
+          body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeMobileMenu() {
+        if (mobileNav) {
+          mobileNav.classList.add('-translate-y-full');
+          mobileNav.classList.remove('translate-y-0');
+          body.style.overflow = '';
+        }
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+      }
+
+      if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+      }
+
+      // Close mobile menu when clicking on navigation links
+      if (mobileNav) {
+        const mobileNavLinks = mobileNav.querySelectorAll('a[href^="#"]');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+      }
+
+      // Close mobile menu on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeMobileMenu();
+        }
+      });
+    });
+
+    // Countdown Timer
+    function updateCountdown() {
+      const eventDate = new Date('2025-09-26T00:00:00');
+      const now = new Date();
+      const diff = eventDate.getTime() - now.getTime();
+      
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        
+        if (daysEl) daysEl.textContent = days.toString();
+        if (hoursEl) hoursEl.textContent = hours.toString();
+        if (minutesEl) minutesEl.textContent = minutes.toString();
+        if (secondsEl) secondsEl.textContent = seconds.toString();
+      }
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</Layout>

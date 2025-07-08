@@ -1,0 +1,458 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Author Guidelines - PCSC 2025">
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-pink-600 to-pink-800 backdrop-blur-md border-b border-white/20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-white rounded-lg flex items-center justify-center p-1.5 lg:p-2">
+            <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+          </div>
+          <div class="text-white">
+            <div class="font-bold text-lg lg:text-xl">PCSC 2025</div>
+            <div class="text-xs lg:text-sm text-white/80 hidden sm:block">Philippine Computing Science Congress</div>
+          </div>
+        </a>
+        
+        <!-- Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="/about" class="text-white/90 hover:text-white transition-colors font-medium">ABOUT</a>
+          <a href="/program" class="text-white/90 hover:text-white transition-colors font-medium">PROGRAM</a>
+          <a href="/call-for-papers" class="text-white/90 hover:text-white transition-colors font-medium">CALL FOR PAPERS</a>
+          <a href="/venue" class="text-white/90 hover:text-white transition-colors font-medium">VENUE</a>
+          <a href="/contact" class="text-white/90 hover:text-white transition-colors font-medium">CONTACT</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-pink-600 to-pink-800 text-white py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Author Guidelines</h1>
+        <p class="text-xl text-pink-100">
+          Comprehensive guidelines for paper submission and formatting
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-16">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Quick Downloads -->
+        <section class="mb-16">
+          <div class="bg-blue-50 rounded-xl p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Quick Downloads</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+              <a href="/templates/ieee-template.docx" class="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow flex items-center space-x-3">
+                <div class="bg-blue-100 p-2 rounded">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">IEEE Template</div>
+                  <div class="text-sm text-gray-600">Word Document</div>
+                </div>
+              </a>
+              
+              <a href="/templates/ieee-template.zip" class="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow flex items-center space-x-3">
+                <div class="bg-green-100 p-2 rounded">
+                  <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">LaTeX Template</div>
+                  <div class="text-sm text-gray-600">ZIP Archive</div>
+                </div>
+              </a>
+              
+              <a href="/guidelines/author-checklist.pdf" class="bg-white p-4 rounded-lg shadow-sm border hover:shadow-md transition-shadow flex items-center space-x-3">
+                <div class="bg-pink-100 p-2 rounded">
+                  <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900">Author Checklist</div>
+                  <div class="text-sm text-gray-600">PDF Document</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Paper Format -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Paper Format Requirements</h2>
+          
+          <div class="space-y-8">
+            <!-- Format Specifications -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Format Specifications</h3>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Paper Length</h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center">
+                      <span class="bg-green-100 text-green-800 p-1 rounded mr-3">✓</span>
+                      <span><strong>Full Papers:</strong> 6-8 pages maximum</span>
+                    </li>
+                    <li class="flex items-center">
+                      <span class="bg-green-100 text-green-800 p-1 rounded mr-3">✓</span>
+                      <span><strong>Short Papers:</strong> 4 pages maximum</span>
+                    </li>
+                    <li class="flex items-center">
+                      <span class="bg-green-100 text-green-800 p-1 rounded mr-3">✓</span>
+                      <span><strong>Poster Papers:</strong> 2 pages maximum</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Technical Specifications</h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li>• IEEE Computer Society format</li>
+                    <li>• Two-column layout</li>
+                    <li>• 10pt Times Roman font</li>
+                    <li>• A4 paper size</li>
+                    <li>• PDF format only</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Structure -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Content Structure</h3>
+              <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <h4 class="font-medium text-gray-900 mb-2">Required Sections (in order)</h4>
+                  <ol class="list-decimal list-inside space-y-1 text-gray-700">
+                    <li>Title (concise and descriptive)</li>
+                    <li>Author names and affiliations</li>
+                    <li>Abstract (150-250 words)</li>
+                    <li>Keywords (4-6 keywords)</li>
+                    <li>Introduction</li>
+                    <li>Related Work</li>
+                    <li>Methodology/Approach</li>
+                    <li>Results and Analysis</li>
+                    <li>Discussion</li>
+                    <li>Conclusion</li>
+                    <li>References</li>
+                  </ol>
+                </div>
+                
+                <div class="border-l-4 border-orange-500 pl-4">
+                  <h4 class="font-medium text-gray-900 mb-2">Optional Sections</h4>
+                  <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Acknowledgments</li>
+                    <li>Appendices</li>
+                    <li>Author biographies (for journal submissions)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Submission Guidelines -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Submission Guidelines</h2>
+          
+          <div class="space-y-6">
+            <!-- Submission Process -->
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Submission Process</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                  <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Prepare Your Manuscript</h4>
+                    <p class="text-gray-700 text-sm">Ensure your paper follows all formatting guidelines and includes all required sections.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                  <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Submit via EasyChair</h4>
+                    <p class="text-gray-700 text-sm">Upload your PDF file through our online submission system at easychair.org/conferences/?conf=pcsc2025</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                  <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Await Review Results</h4>
+                    <p class="text-gray-700 text-sm">Reviews will be completed by March 1, 2025. Authors will receive notification via email.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- File Requirements -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">File Requirements</h3>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-green-700 mb-3">✓ Accepted Formats</h4>
+                  <ul class="space-y-1 text-gray-700">
+                    <li>• PDF files only</li>
+                    <li>• Maximum file size: 10MB</li>
+                    <li>• Embedded fonts required</li>
+                    <li>• High-resolution images (300 DPI min)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-red-700 mb-3">✗ Not Accepted</h4>
+                  <ul class="space-y-1 text-gray-700">
+                    <li>• Word documents (.doc, .docx)</li>
+                    <li>• LaTeX source files</li>
+                    <li>• Scanned documents</li>
+                    <li>• Password-protected files</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Writing Guidelines -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Writing Guidelines</h2>
+          
+          <div class="space-y-6">
+            <!-- Language and Style -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Language and Style</h3>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Language Requirements</h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li>• English only</li>
+                    <li>• Clear and concise writing</li>
+                    <li>• Technical accuracy</li>
+                    <li>• Proper grammar and spelling</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Style Guidelines</h4>
+                  <ul class="space-y-2 text-gray-700">
+                    <li>• Third-person narrative preferred</li>
+                    <li>• Active voice when possible</li>
+                    <li>• Consistent terminology</li>
+                    <li>• Formal academic tone</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Figures and Tables -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Figures and Tables</h3>
+              <div class="space-y-4">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-blue-900 mb-2">Figure Guidelines</h4>
+                  <ul class="space-y-1 text-blue-800 text-sm">
+                    <li>• High resolution (300 DPI minimum)</li>
+                    <li>• Clear, readable text in figures</li>
+                    <li>• Grayscale or color (color preferred for digital proceedings)</li>
+                    <li>• Proper captions below figures</li>
+                    <li>• Referenced in text as "Figure 1", "Figure 2", etc.</li>
+                  </ul>
+                </div>
+                
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-green-900 mb-2">Table Guidelines</h4>
+                  <ul class="space-y-1 text-green-800 text-sm">
+                    <li>• Clear headers and structure</li>
+                    <li>• Appropriate use of borders</li>
+                    <li>• Captions above tables</li>
+                    <li>• Consistent formatting</li>
+                    <li>• Referenced in text as "Table 1", "Table 2", etc.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Citations and References -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Citations and References</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Citation Style</h4>
+                  <p class="text-gray-700 mb-3">Use IEEE reference style with numbered citations in square brackets [1], [2], etc.</p>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-700 mb-2"><strong>Example in text:</strong></p>
+                    <p class="text-sm text-gray-800 italic">"Machine learning algorithms have shown significant improvements in accuracy [1], [3]-[5]."</p>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-3">Reference Format Examples</h4>
+                  <div class="space-y-3 text-sm">
+                    <div class="bg-gray-50 p-3 rounded">
+                      <p class="font-medium text-gray-800 mb-1">Journal Article:</p>
+                      <p class="text-gray-700">[1] A. Smith and B. Jones, "Deep learning for image recognition," IEEE Trans. Pattern Anal. Mach. Intell., vol. 42, no. 3, pp. 123-135, Mar. 2020.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-3 rounded">
+                      <p class="font-medium text-gray-800 mb-1">Conference Paper:</p>
+                      <p class="text-gray-700">[2] C. Brown, "Natural language processing with transformers," in Proc. Int. Conf. Mach. Learn., 2021, pp. 45-52.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-3 rounded">
+                      <p class="font-medium text-gray-800 mb-1">Book:</p>
+                      <p class="text-gray-700">[3] D. Wilson, Artificial Intelligence: A Modern Approach, 3rd ed. Boston, MA: MIT Press, 2019.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Review Process -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Review Process</h2>
+          
+          <div class="bg-white rounded-xl p-6 shadow-sm border">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Peer Review</h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="bg-pink-100 text-pink-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Double-blind review process</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="bg-pink-100 text-pink-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Minimum 3 reviewers per paper</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="bg-pink-100 text-pink-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Expert reviewers in relevant fields</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="bg-pink-100 text-pink-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Detailed feedback provided</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Evaluation Criteria</h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="bg-blue-100 text-blue-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Technical quality and correctness</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="bg-blue-100 text-blue-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Novelty and significance</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="bg-blue-100 text-blue-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Clarity and presentation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="bg-blue-100 text-blue-800 p-1 rounded mr-3 mt-1">•</span>
+                    <span>Relevance to conference scope</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ethics and Policies -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Ethics and Policies</h2>
+          
+          <div class="space-y-6">
+            <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+              <h3 class="text-xl font-semibold text-red-900 mb-4">Important Policies</h3>
+              <div class="space-y-3 text-red-800">
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.314 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                  </svg>
+                  <div>
+                    <strong>No Plagiarism:</strong> All submissions must be original work. Proper attribution is required for all sources.
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.314 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                  </svg>
+                  <div>
+                    <strong>No Multiple Submissions:</strong> Papers must not be simultaneously submitted to other conferences or journals.
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.314 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                  </svg>
+                  <div>
+                    <strong>Previous Publication:</strong> Extended versions of previously published work are acceptable if substantial new content is added (>30% new material).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="text-center">
+          <div class="bg-pink-600 text-white rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-4">Need Help?</h2>
+            <p class="text-pink-100 mb-6">
+              Our program committee is here to assist with any questions about paper submission.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+              <a href="mailto:papers@pcsc2025.org" class="w-full sm:w-auto inline-block bg-white text-pink-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                Email Program Committee
+              </a>
+              <a href="/contact" class="w-full sm:w-auto inline-block bg-pink-500 text-white px-8 py-3 rounded-lg hover:bg-pink-400 transition-colors font-medium border border-pink-400">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2">
+            <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+          </div>
+          <span class="text-xl font-bold">PCSC 2025</span>
+        </div>
+        <p class="text-gray-400 mb-4">25th Philippine Computing Science Congress</p>
+        <p class="text-gray-400">University of the Immaculate Conception, Davao City</p>
+      </div>
+    </div>
+  </footer>
+</Layout>

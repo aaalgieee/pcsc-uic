@@ -1,0 +1,262 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Student Research Workshop - PCSC 2025">
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-pink-600 to-pink-800 backdrop-blur-md border-b border-white/20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-white rounded-lg flex items-center justify-center p-1.5 lg:p-2">
+            <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+          </div>
+          <div class="text-white">
+            <div class="font-bold text-lg lg:text-xl">PCSC 2025</div>
+            <div class="text-xs lg:text-sm text-white/80 hidden sm:block">Philippine Computing Science Congress</div>
+          </div>
+        </a>
+        
+        <!-- Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="/about" class="text-white/90 hover:text-white transition-colors font-medium">ABOUT</a>
+          <a href="/program" class="text-white/90 hover:text-white transition-colors font-medium">PROGRAM</a>
+          <a href="/call-for-papers" class="text-white/90 hover:text-white transition-colors font-medium">CALL FOR PAPERS</a>
+          <a href="/venue" class="text-white/90 hover:text-white transition-colors font-medium">VENUE</a>
+          <a href="/contact" class="text-white/90 hover:text-white transition-colors font-medium">CONTACT</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-pink-600 to-pink-800 text-white py-20">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Student Research Workshop</h1>
+        <p class="text-xl text-pink-100">
+          Showcasing emerging talent in computing science research
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-16">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Workshop Overview -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Workshop Overview</h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              The Student Research Workshop at PCSC 2025 provides an excellent platform for undergraduate and graduate students to present their ongoing research, receive feedback from experienced researchers, and connect with peers working in similar areas.
+            </p>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              This special session encourages student participation in the conference and aims to foster the next generation of computing researchers in the Philippines and neighboring countries.
+            </p>
+          </div>
+        </section>
+
+        <!-- Objectives -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Workshop Objectives</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <div class="bg-blue-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Research Presentation</h3>
+              <p class="text-gray-700">
+                Provide students with opportunities to present their research findings and receive constructive feedback from peers and faculty.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <div class="bg-green-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Networking</h3>
+              <p class="text-gray-700">
+                Foster connections between students and established researchers, creating mentorship opportunities and collaborative relationships.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <div class="bg-pink-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+              <p class="text-gray-700">
+                Encourage innovative thinking and creative solutions to computing challenges through student-led research initiatives.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-sm border">
+              <div class="bg-orange-100 p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Skill Development</h3>
+              <p class="text-gray-700">
+                Enhance presentation skills, research methodology, and academic writing through practical experience and mentorship.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Submission Guidelines -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Submission Guidelines</h2>
+          <div class="bg-blue-50 rounded-xl p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Abstract Requirements</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">1</span>
+                <span><strong>Length:</strong> 500-800 words including title, author information, and references</span>
+              </li>
+              <li class="flex items-start">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">2</span>
+                <span><strong>Format:</strong> IEEE format for academic papers</span>
+              </li>
+              <li class="flex items-start">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">3</span>
+                <span><strong>Content:</strong> Clear statement of research problem, methodology, preliminary results, and expected contributions</span>
+              </li>
+              <li class="flex items-start">
+                <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">4</span>
+                <span><strong>Eligibility:</strong> Current undergraduate or graduate students in computing-related fields</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Important Dates -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Important Dates</h2>
+          <div class="space-y-4">
+            <div class="bg-white rounded-xl p-6 shadow-sm border flex items-center justify-between">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">Abstract Submission Deadline</h3>
+                <p class="text-gray-600">Extended abstract submissions due</p>
+              </div>
+              <div class="text-right">
+                <span class="text-2xl font-bold text-pink-600">Feb 15</span>
+                <p class="text-sm text-gray-500">2025</p>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-sm border flex items-center justify-between">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">Notification of Acceptance</h3>
+                <p class="text-gray-600">Authors will be notified of acceptance status</p>
+              </div>
+              <div class="text-right">
+                <span class="text-2xl font-bold text-blue-600">Mar 1</span>
+                <p class="text-sm text-gray-500">2025</p>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-sm border flex items-center justify-between">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">Workshop Presentation</h3>
+                <p class="text-gray-600">Student presentations during conference</p>
+              </div>
+              <div class="text-right">
+                <span class="text-2xl font-bold text-green-600">May 8-9</span>
+                <p class="text-sm text-gray-500">2025</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Awards and Recognition -->
+        <section class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Awards and Recognition</h2>
+          <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8">
+            <div class="text-center mb-6">
+              <div class="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Best Student Research Awards</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="bg-yellow-500 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span class="font-bold">1st</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Best Overall Research</h4>
+                <p class="text-gray-600 text-sm">₱15,000 cash prize + certificate</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-gray-400 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span class="font-bold">2nd</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Runner-up</h4>
+                <p class="text-gray-600 text-sm">₱10,000 cash prize + certificate</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-orange-500 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <span class="font-bold">3rd</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Third Place</h4>
+                <p class="text-gray-600 text-sm">₱5,000 cash prize + certificate</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center">
+          <div class="bg-pink-600 text-white rounded-2xl p-8">
+            <h2 class="text-2xl font-bold mb-4">Ready to Share Your Research?</h2>
+            <p class="text-pink-100 mb-6">
+              Join the Student Research Workshop and showcase your work to the computing community.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+              <button class="w-full sm:w-auto bg-white text-pink-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                Submit Your Abstract
+              </button>
+              <a href="/contact" class="w-full sm:w-auto inline-block bg-pink-500 text-white px-8 py-3 rounded-lg hover:bg-pink-400 transition-colors font-medium border border-pink-400">
+                Ask Questions
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2">
+            <img src="/csp.png" alt="Computing Society of the Philippines" class="w-full h-full object-contain" />
+          </div>
+          <span class="text-xl font-bold">PCSC 2025</span>
+        </div>
+        <p class="text-gray-400 mb-4">25th Philippine Computing Science Congress</p>
+        <p class="text-gray-400">University of the Immaculate Conception, Davao City</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
